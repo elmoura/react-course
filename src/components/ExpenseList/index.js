@@ -1,15 +1,17 @@
+import { Card } from "../Card";
 import { ExpenseItem } from "../ExpenseItem";
+import "./index.css";
 
-export const ExpenseList = ({ expenses }) => {
+export const ExpenseList = ({ items }) => {
   return (
-    <div className="expenses">
-      {expenses.map((expense) => (
+    <Card className="expenses">
+      {items.map((expense) => (
         <ExpenseItem
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
         />
       ))}
-    </div>
+    </Card>
   );
 };

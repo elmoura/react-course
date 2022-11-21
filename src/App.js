@@ -23,5 +23,5 @@ export const App = () => {
     },
   ];
 
-  return <ExpenseList expenses={expenses} />;
+  return <ExpenseList items={expenses} />;
 };
