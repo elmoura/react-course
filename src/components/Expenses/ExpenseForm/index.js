@@ -9,29 +9,27 @@ export const ExpenseForm = () => {
   });
 
   const titleChangeHandler = (event) => {
-    setEnteredTitle({
-      ...userInput,
+    setUserInput((previousState) => ({
+      ...previousState,
       enteredTitle: event.target.value,
-    });
+    }));
   };
 
   const amountChangeHandler = (event) => {
-    setAmount({
-      ...userInput,
+    setUserInput((previousState) => ({
+      ...previousState,
       enteredAmount: event.target.value,
-    });
+    }));
   };
 
   const dateChangeHandler = (event) => {
-    setDate({
-      ...userInput,
+    setUserInput((previousState) => ({
+      ...previousState,
       enteredDate: event.target.value,
-    });
+    }));
   };
 
-  const handleExpenseSubmit = () => {
-    const payload = { title, amount, date };
-  };
+  const handleExpenseSubmit = () => {};
 
   const maxYear = new Date().getFullYear() + 1;
 
