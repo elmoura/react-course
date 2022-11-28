@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Button } from "../../UI/Button";
 import "./index.css";
 
-export const ExpenseForm = ({ onSaveExpenseData }) => {
+export const ExpenseForm = ({ onSaveExpenseData, onCancelSubmit }) => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
@@ -68,7 +69,8 @@ export const ExpenseForm = ({ onSaveExpenseData }) => {
       </div>
 
       <div className="new-expense__actions">
-        <button type="submit">Add Expense</button>
+        <Button text="Cancel" onClickButton={onCancelSubmit} />
+        <Button text="AddExpense" type="submit" />
       </div>
     </form>
   );
